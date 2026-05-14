@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="formulario">
+
+        <div class="titulo">
+            Datos del proveedor
+        </div>
+
+        <div class="contenido">
+
+            <form id="miFormulario">
+
+                <label>Nombre</label>
+                <input type="text" placeholder="Nombre" required>
+
+                <label>Dirección</label>
+                <textarea rows="4" placeholder="Dirección" required></textarea>
+
+                <div class="fila">
+
+                    <div class="columna">
+                        <label>Teléfono residencial</label>
+                        <input type="text" placeholder="Teléfono residencial" required>
+                    </div>
+
+                    <div class="columna">
+                        <label>Celular</label>
+                        <input type="text" placeholder="Teléfono celular" required>
+                    </div>
+
+                </div>
+
+                <label>Email</label>
+                <input type="email" placeholder="Correo electrónico" required>
+
+                <button type="submit">Guardar</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+        const formulario = document.getElementById("miFormulario");
+
+        formulario.addEventListener("submit", function(e){
+            e.preventDefault();
+
+            formulario.reset();
+        });
+    </script>
+
+</body>
+</html>
